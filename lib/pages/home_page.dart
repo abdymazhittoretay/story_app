@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:story_app/pages/story_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -56,7 +57,13 @@ class _HomePageState extends State<HomePage> {
                     width: 10.0,
                   ),
                   GestureDetector(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) =>
+                                  StoryPage(title: story[0], story: story[1])));
+                    },
                     child: Container(
                         height: 50.0,
                         width: 50.0,
