@@ -32,7 +32,16 @@ class _HomePageState extends State<HomePage> {
         backgroundColor: Colors.white,
         surfaceTintColor: Colors.white,
         foregroundColor: Colors.black,
-        title: Text("Stories"),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(Icons.auto_stories),
+            SizedBox(
+              width: 5.0,
+            ),
+            Text("Stories"),
+          ],
+        ),
         centerTitle: true,
       ),
       body: ListView.builder(
